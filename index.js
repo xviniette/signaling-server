@@ -2,7 +2,11 @@ const { WebSocketServer } = require("ws")
 
 const crypto = require("crypto")
 
-const wss = new WebSocketServer({ port: 8080 })
+const PORT = process.env.PORT || 4321
+
+const wss = new WebSocketServer({ port: PORT })
+
+console.log("SERVER ON ", PORT)
 
 let clients = []
 
