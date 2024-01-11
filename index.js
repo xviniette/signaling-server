@@ -1,6 +1,6 @@
-import { WebSocketServer } from "ws"
+const { WebSocketServer } = require("ws")
 
-import crypto from "crypto"
+const crypto = require("crypto")
 
 const wss = new WebSocketServer({ port: 8080 })
 
