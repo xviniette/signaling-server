@@ -44,4 +44,6 @@ wss.on("connection", ws => {
 const server = app.listen(PORT)
 console.log("SERVER ON ", PORT)
 
+app.get("/", (req, res) => res.send("Hello world"))
+
 server.on("upgrade", (request, socket, head) => wss.handleUpgrade(request, socket, head, socket => wss.emit("connection", socket, request)))
